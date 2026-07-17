@@ -28,6 +28,8 @@ display:flex;
 justify-content:center;
 align-items:center;
 
+min-height:100vh;
+
 padding:50px 20px;
 
 }
@@ -129,6 +131,8 @@ color:#735D78;
 
 margin-bottom:15px;
 
+line-height:1.2;
+
 }
 
 .line{
@@ -150,19 +154,7 @@ line-height:2;
 
 color:#565656;
 
-}
-
-.signature{
-
-margin-top:45px;
-
-text-align:right;
-
-font-family:'Caveat';
-
-font-size:34px;
-
-color:#8D78AA;
+word-break:break-word;
 
 }
 
@@ -179,6 +171,20 @@ color:#565656;
 text-align:left;
 
 line-height:1.8;
+
+}
+
+.signature{
+
+margin-top:35px;
+
+text-align:right;
+
+font-family:'Caveat';
+
+font-size:34px;
+
+color:#8D78AA;
 
 }
 
@@ -200,6 +206,85 @@ transform:translateY(0);
 
 }
 
+/* ---------------- MOBILE ---------------- */
+
+@media screen and (max-width:768px){
+
+body{
+
+padding:20px 12px;
+
+}
+
+.paper{
+
+padding:35px 22px;
+
+border-radius:10px;
+
+}
+
+.paper::before{
+
+display:none;
+
+}
+
+.tape{
+
+width:90px;
+height:22px;
+
+}
+
+.date{
+
+font-size:11px;
+
+letter-spacing:2px;
+
+}
+
+h1{
+
+font-size:38px;
+
+}
+
+.line{
+
+width:120px;
+
+margin:15px auto 25px;
+
+}
+
+.content{
+
+font-size:16px;
+
+line-height:1.9;
+
+}
+
+.footer{
+
+font-size:17px;
+
+line-height:1.7;
+
+}
+
+.signature{
+
+font-size:28px;
+
+margin-top:28px;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -215,7 +300,7 @@ transform:translateY(0);
 05 • MARCH • 2020
 
 </div>
-  
+
 <h1>
 
 Where Our Story Began 🤍
@@ -232,7 +317,7 @@ but here we are nanu day 5 du letter nav cmt agidh date ge connect madkondhu mad
 so baa ninig gothira stry ne mattee narrate madthini but ofc nan POV inda...
 
 <br><br>
-  
+
 Avath yen agith nanig nijja nenp illaa but nin bejar madkondh ide nan yeno madidhe antha...
 
 <br><br>
@@ -296,7 +381,7 @@ Welcome to the suprise where there is no supriseeee TT TT TT...
 
 </div>
 
-  <div class="footer">
+<div class="footer">
 
 Sari matte siganaa... bo boii babyyy..!!<br><br>
 
@@ -309,7 +394,7 @@ Love uu soo muchh Pappuu😚😚😚🫂🫂🫂💗✨✨✨
 ~ Nin Chinnii 🤍
 
 </div>
-  
+
 </div>
 
 </body>
