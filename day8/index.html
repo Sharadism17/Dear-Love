@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>You're Literally Everywhere 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#DDD0F3;
+
+font-family:'Quicksand',sans-serif;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:30px 15px;
+
+min-height:100vh;
+
+}
+
+.paper{
+
+width:950px;
+max-width:100%;
+
+background:#FFFDF9;
+
+padding:50px 30px 60px;
+
+border-radius:18px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+position:relative;
+
+overflow:hidden;
+
+animation:fade .8s;
+
+}
+
+.tape{
+
+width:130px;
+height:34px;
+
+background:rgba(212,191,233,.45);
+
+position:absolute;
+
+top:-12px;
+left:50%;
+
+transform:translateX(-50%) rotate(-3deg);
+
+border-radius:5px;
+
+}
+
+h1{
+
+font-family:'Caveat',cursive;
+
+font-size:60px;
+
+text-align:center;
+
+color:#735D78;
+
+margin-top:10px;
+margin-bottom:20px;
+
+line-height:1.2;
+
+}
+
+.intro{
+
+text-align:center;
+
+font-size:19px;
+
+line-height:1.8;
+
+color:#666;
+
+max-width:620px;
+
+margin:0 auto 45px;
+
+}
+
+.board{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(75px,1fr));
+
+gap:28px;
+
+justify-items:center;
+
+align-items:center;
+
+}
+
+.item{
+
+font-size:42px;
+
+cursor:pointer;
+
+transition:.25s;
+
+user-select:none;
+
+}
+
+.item:hover{
+
+transform:rotate(-8deg) scale(1.18);
+
+}
+
+.footer{
+
+margin-top:45px;
+
+font-size:20px;
+
+font-family:'Quicksand',sans-serif;
+
+color:#565656;
+
+text-align:left;
+
+line-height:1.8;
+
+}
+
+.signature{
+
+margin-top:35px;
+
+text-align:right;
+
+font-family:'Caveat';
+
+font-size:34px;
+
+color:#8D78AA;
+
+}
+
+.overlay{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.35);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+z-index:999;
+
+}
+
+.popup{
+
+background:#FFF8E8;
+
+width:85%;
+max-width:340px;
+
+padding:30px 24px;
+
+border-radius:6px;
+
+border:2px solid #D8C7A1;
+
+box-shadow:8px 8px 0 rgba(0,0,0,.15);
+
+position:relative;
+
+text-align:center;
+
+transform:rotate(-1deg);
+
+background-image:
+repeating-linear-gradient(
+to bottom,
+transparent,
+transparent 29px,
+rgba(0,0,0,.06) 30px
+);
+
+animation:popup .3s;
+
+}
+  
+.popupTape{
+
+position:absolute;
+
+top:-12px;
+
+left:50%;
+
+transform:translateX(-50%) rotate(-4deg);
+
+width:90px;
+
+height:24px;
+
+background:rgba(255,236,170,.65);
+
+border:1px solid rgba(0,0,0,.08);
+
+}
+  
+.popupIcon{
+
+font-size:48px;
+
+margin-bottom:18px;
+
+}
+
+.popupText{
+
+font-size:19px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+.backBtn{
+
+margin-top:28px;
+
+padding:10px 24px;
+
+background:#F3E3C3;
+
+border:2px solid #C4A77D;
+
+border-radius:30px;
+
+font-family:'Quicksand',sans-serif;
+
+font-size:15px;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.backBtn:hover{
+
+background:#EFD7A8;
+
+transform:translateY(-2px);
+
+}
+  
+@keyframes popup{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.paper{
+
+padding:35px 18px 45px;
+
+}
+
+h1{
+
+font-size:42px;
+
+}
+
+.intro{
+
+font-size:16px;
+
+margin-bottom:35px;
+
+}
+
+.board{
+
+grid-template-columns:repeat(4,1fr);
+
+gap:22px;
+
+}
+
+.item{
+
+font-size:34px;
+
+}
+
+.popup{
+
+width:300px;
+
+padding:25px;
+
+}
+
+.popupText{
+
+font-size:17px;
+
+}
+
+.signature{
+
+font-size:28px;
+
+}
+
+.footer{
+
+font-size:17px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="paper">
+
+<div class="tape"></div>
+
+<h1>
+
+You're Literally Everywhere. 🤍
+
+</h1>
+
+<p class="intro">
+
+I don't think you realise how often you pop into my mind...<br>
+
+Tap on the little doodles and you'll understand.
+
+</p>
+
+<div class="board">
+
+<div class="item" data-icon="🌧️" data-message="You know nanig nin male bandag yella nenp agthiya antha...">🌧️</div>
+
+<div class="item" data-icon="🎧" data-message="Yellaa loveeee realtedd songss keluskondaga ninee nenp agadhh nanigee...">🎧</div>
+
+<div class="item" data-icon="🦖" data-message="Dino... Ecspecially T-rex du yene nodidru nin nenp agthiya... n nanig adun inig thagobek antha ansuthee....">🦖</div>
+
+<div class="item" data-icon="🍷" data-message="Wine or any drinks nodiru nine nenp agthiyaa.. well bcz yella nin jothe ne try madiradh alla....">🍷</div>
+
+<div class="item" data-icon="🌙" data-message="Nan letter alli heldange... Nanig moon nodaglu nine nenp agadhuu... Hege earth ge moon constant agi ithu.. Hange ninu nanigg idiyaa...">🌙</div>
+
+<div class="item" data-icon="📷" data-message="Nan majority evag evag pics thagiadhe ninig kalsake adh ninig goth ithaaa????.">📷</div>
+
+<div class="item" data-icon="☕" data-message="Nanig monnster nodag yella nine nenp agthiyaa.">☕</div>
+
+<div class="item" data-icon="🫂" data-message="Ee emoji use madadh nine abyasa madsidhuu... nin version du mini me agana andhkondh idiniii.">🫂</div>
+
+<div class="item" data-icon="✨" data-message="Everytime nan ee emoji use madaga nin nenp agthiyaa... which is like evrryyy single timee....">✨</div>
+
+<div class="item" data-icon="🐟" data-message="Fish nodag yella nin nenp agthiya... bcz its ur hatest dish antha... Nanig yavaglu shock aguthe nin fish thindhe andhag yella ninig gotha...">🐟</div>
+
+<div class="item" data-icon="🎀" data-message="Ik ninig ee emoji ista antha... also again nin indane nanig ee emoji use madadhu abyasa agidhe... like bf like gf...">🎀</div>
+
+<div class="item" data-icon="🎮" data-message="Nanig Clash of clans nodidre or free fire nodidre nin nenp agthiyaa... 8Th alli yesthu mathadthidhe adru bagee.. also abt pokemonnn...">🎮</div>
+
+<div class="item" data-icon="🍫" data-message="Nin nan frst valentine du slik chocolate kottee... soo everytime i look at that i remember you... ee sathi nanig adun ninig kodbekithuu...">🍫</div>
+
+<div class="item" data-icon="🚗" data-message="Nanig ninu car entussiast aa alwa antha gothillaa... but volkswagon bage keldaga nodaga yella nin nenp  agthiyaa.">🚗</div>
+
+<div class="item" data-icon="💌" data-message="Nan letters ninige sakathhhhh bardiradhuu gothaa....">💌</div>
+
+<div class="item" data-icon="🌷" data-message="Flowers nodaglu nine nenp agthiyaa... bcz u r the frst prsn to get me flowers and also nanigu ninig kodbek ansuthee....">🌷</div>
+
+<div class="item" data-icon="🎵" data-message="Slow songs keldaga nine nenp agthiya.. even though nan keladh kammi... also uk nan let me down slowly nam song andhkondh ide pu li....">🎵</div>
+
+<div class="item" data-icon="🏋🏻" data-message="Gym andru  nine nenp agthiyaa.. nin frst prsn nanig gothiradhu gym ge hodhavru ninig gothaa... Also veryyy Sexyyy...!!!.">🏋🏻</div>
+
+<div class="item" data-icon="🧸" data-message="Ik u like teddy bear... ssooo nanig teddy bear nodaglu nin nanig nenp agthiyaaa...">🧸</div>
+
+<div class="item"
+data-icon="💗"
+data-message="Yelladhuu ninee Nenpp agthiyaaa... 🤍">
+💗
+</div>
+
+</div>
+
+<div class="footer">
+
+Sari... bo boii babyyy..!!
+<br><br>
+
+Love uu soo muchh Pappuu😚😚😚🫂🫂🫂💗✨✨✨
+
+</div>
+
+<div class="signature">
+
+~ Nin Chinnii 🤍
+
+</div>
+
+</div>
+
+<div class="overlay" id="overlay">
+
+<div class="popup">
+
+<div class="popupTape"></div>
+
+<div class="popupIcon" id="popupIcon">
+
+🌸
+
+</div>
+
+<div class="popupText" id="popupText">
+
+Hello
+
+</div>
+
+<button id="closePopup" class="backBtn">
+← Back
+</button>
+  
+</div>
+
+</div>
+
+<script>
+
+const overlay=document.getElementById("overlay");
+
+const popupIcon=document.getElementById("popupIcon");
+
+const popupText=document.getElementById("popupText");
+
+const closeBtn=document.getElementById("closePopup");
+
+const items=document.querySelectorAll(".item");
+
+items.forEach(item=>{
+
+item.addEventListener("click",()=>{
+
+popupIcon.textContent=item.dataset.icon;
+
+popupText.textContent=item.dataset.message;
+
+overlay.style.display="flex";
+
+});
+
+});
+
+closeBtn.addEventListener("click",()=>{
+
+overlay.style.display="none";
+
+});
+
+overlay.addEventListener("click",(e)=>{
+
+if(e.target===overlay){
+
+overlay.style.display="none";
+
+}
+
+});
+</script>
+
+</body>
+
+</html>
